@@ -9,8 +9,10 @@ namespace LibraryERP.Business.Interfaces
 {
     public interface ILoanService
     {
+        Task UpdateEntire(Loan loan);
+        Task BorrowBooks();
         Task Create(Loan loan);
         Task<Loan> GetLoanById(int id);
-        Task ReturnBooks(int LoanId);
+        Task ReturnBooks();
     }
 }

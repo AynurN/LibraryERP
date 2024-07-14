@@ -14,6 +14,7 @@ namespace LibraryERP.CA
             IBorrowerService borrower = new BorrowerService();
             ILoanService loan = new LoanService();
             IloanItemService loanItem = new LoanItemService();
+            IAuthorBookService authorBook = new AuthorBookService();
         label1:
             Console.WriteLine("Choose action");
             Console.WriteLine("1.Author actions\n" +
@@ -38,6 +39,7 @@ namespace LibraryERP.CA
                             "2.Create author\n" +
                             "3.Edit author\n" +
                             "4.Delete author\n" +
+                            "5.Assign book\n"+
                             "0.Exit");
                         int c2 = Convert.ToInt32(Console.ReadLine());
                         switch (c2)
@@ -134,6 +136,35 @@ namespace LibraryERP.CA
                                         }
                                     }
                                     catch (Exception ex)
+                                    {
+                                        await Console.Out.WriteLineAsync(ex.Message);
+                                    }
+
+                                }
+                                goto label2;
+
+                            case 5:
+                                {
+                                    try
+                                    {
+                                        await Console.Out.WriteLineAsync("Choose id of Author to assign:");
+                                        List<Author> authors = await author.GetAll();
+                                        foreach (var item in authors)
+                                        {
+                                            await Console.Out.WriteLineAsync(item.ToString());
+                                        }
+                                        int id = Convert.ToInt32(Console.ReadLine());
+                                        await Console.Out.WriteLineAsync("Choose id of Book to assign:");
+                                        List<Book> books = await book.GetAll();
+                                        foreach (var item in books)
+                                        {
+                                            await Console.Out.WriteLineAsync(item.Id + " " + item.Title);
+                                        }
+                                        int bookId = Convert.ToInt32(Console.ReadLine());
+                                       await authorBook.AssignAuthorToTheBook(id, bookId);
+
+                                    }
+                                    catch(Exception ex)
                                     {
                                         await Console.Out.WriteLineAsync(ex.Message);
                                     }
@@ -451,81 +482,24 @@ namespace LibraryERP.CA
                     {
                         try
                         {
-                            await Console.Out.WriteLineAsync("Choose id of borrower:");
-                            List<Borrower> borrowers = await borrower.GetAll();
-                            foreach (var item in borrowers)
-                            {
-                                await Console.Out.WriteLineAsync(item.Id + " " + item.FullName);
-                            }
-                            int borrowerId = Convert.ToInt32(Console.ReadLine());
-
-                            Borrower bor = await borrower.GetBorrowerById(borrowerId);
-
-
-                        l3:
-                            await Console.Out.WriteLineAsync("Choose id of Book to borrow:");
-                            List<Book> books = await book.GetAll();
-                            foreach (var item in books)
-                            {
-                                await Console.Out.WriteLineAsync(item.Id + " " + item.Title + " Availabilty:" + item.Avilability);
-                            }
-                            int id = Convert.ToInt32(Console.ReadLine());
-                            Book b = await book.GetBookById(id);
-
-                            if (b.Avilability == true)
-                            {
-                                if (bor.Loan == null)
-                                {
-                                    await loan.Create(new Loan() { BorrowerId = bor.Id });
-                                }
-                                try
-                                {
-                                    await loanItem.BorrowBook(id, borrowerId);
-
-                                }
-                                catch (Exception e)
-                                {
-                                    await Console.Out.WriteLineAsync(e.Message);
-                                }
-                            }
-                            await Console.Out.WriteLineAsync("1.Add other book" +
-                                   "0.Exit");
-                            int choice = Convert.ToInt32(Console.ReadLine());
-                            switch (choice)
-                            {
-                                case 1:
-                                    goto l3;
-                                case 0:
-                                    goto label1;
-                            }
-
+                           await loan.BorrowBooks();
                         }
                         catch(Exception ex)
                         {
-                            await Console.Out.WriteLineAsync(ex.Message);
+                            await Console.Out.WriteLineAsync( ex.Message);
                         }
 
-
-                    }
+                        }
+                   
+                    
                     goto label1;
 
                 case 5:
                     {
                         try
                         {
-                            await Console.Out.WriteLineAsync("Choose id of Borrower");
-                            List<Borrower> borrowers = await borrower.GetAll();
-                            foreach (var item in borrowers)
-                            {
-                                await Console.Out.WriteLineAsync(item.Id + " " + item.FullName);
-                            }
-                            int id = Convert.ToInt32(Console.ReadLine());
-                            Borrower bor = await borrower.GetBorrowerById(id);
-                            if (bor.Loan != null)
-                            {
-                                await loan.ReturnBooks(bor.Loan.Id);
-                                bor.Loan = null;
-                            }
+                            await loan.ReturnBooks();
+                           
                         }
                        catch(Exception ex)
                         {
@@ -535,6 +509,100 @@ namespace LibraryERP.CA
 
                     }
                     goto label1;
+                case 6:
+                    {
+                        try
+                        {
+                            await Console.Out.WriteLineAsync(book.GetMostBorrowedBook().ToString());
+                        }
+                        catch(Exception ex)
+                        {
+                            await Console.Out.WriteLineAsync(ex.Message);
+                        }
+
+                       
+                    }
+                    goto label1;
+                case 7:
+                    {
+                        try
+                        {
+                            List<Borrower> lateBorrowers = await borrower.GetLateBorrowers();
+                            foreach (var item in lateBorrowers)
+                            {
+                                await Console.Out.WriteLineAsync(borrower.ToString());
+
+                            }
+
+                        }
+                       catch(Exception ex)
+                        {
+                            await Console.Out.WriteLineAsync(ex.Message);
+                        }
+                    }
+                    goto label1;
+                case 8:
+                    {
+
+                    }
+                    goto label1;
+            case 9:
+                    {
+                        try
+                        {
+                            await Console.Out.WriteLineAsync("Enter title:");
+                            string? s = Console.ReadLine();
+                            if (s != null)
+                            {
+                                List<Book> books = await book.FilterBooksByTitle(s);
+                                foreach (var item in books)
+                                {
+                                    await Console.Out.WriteLineAsync(item.Id+" "+item.Title+" "+item.Desc);
+                                }
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            await Console.Out.WriteLineAsync(ex.Message);
+                        }
+                       
+                        
+                    }
+                    goto label1;
+                case 10:
+                    {
+                        try
+                        {
+                            await Console.Out.WriteLineAsync("Enter title:");
+                            string? s = Console.ReadLine();
+                            if (s != null)
+                            {
+                                List<Book> books = await book.FilterBooksByAuthor(s);
+                                foreach (var item in books)
+                                {
+                                    await Console.Out.WriteLineAsync(item.Title);
+                                }
+                            }
+
+                        }
+                        catch (Exception ex)
+                        {
+                            await Console.Out.WriteLineAsync(ex.Message);
+                        }
+
+                    }
+                    goto label1;
+                case 0:
+                    {
+                        await Console.Out.WriteLineAsync("Program exited!");
+                    }
+                    break;
+                default:
+                    {
+                        await Console.Out.WriteLineAsync("Invalid operation!");
+
+                    }
+                    break;
             }
             
         }

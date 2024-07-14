@@ -8,8 +8,7 @@ using System.Threading.Tasks;
 
 namespace LibraryERP.Core.IRepositories
 {
-    public interface IBookRepository :IGenericRepository<Book>
+    public interface IBookAuthorRepository : IGenericRepository<BookAuthor>
     {
-        
     }
 }

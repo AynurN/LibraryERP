@@ -65,5 +65,13 @@ namespace LibraryERP.Business.Implementations
             searched.Email = borrower.Email;
             await borrowerRepository.CommitAsync();
         }
+
+        public async Task<List<Borrower>> GetLateBorrowers()
+        {
+            return await  borrowerRepository.GetAll()
+                                    .Include(b => b.Loans)
+                                    .Where(b => b.Loans.Any(l => l.MustReturnDate < DateTime.Now))
+                                    .ToListAsync();
+        }
     }
 }

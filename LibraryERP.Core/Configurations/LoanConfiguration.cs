@@ -12,9 +12,11 @@ namespace LibraryERP.Core.Configurations
     {
         public void Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder<Loan> builder)
         {
-            builder.HasOne(x=>x.Borrower)
-                .WithOne(x=>x.Loan)
+            builder.HasOne(x => x.Borrower)
+                .WithMany(x => x.Loans)
+                .HasForeignKey(x => x.BorrowerId)
                 .OnDelete(DeleteBehavior.Cascade);
+           
         }
     }
 }

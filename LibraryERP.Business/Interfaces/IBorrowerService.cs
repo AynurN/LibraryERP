@@ -9,6 +9,7 @@ namespace LibraryERP.Business.Interfaces
 {
     public interface IBorrowerService
     {
+        Task<List<Borrower>> GetLateBorrowers();
         Task<List<Borrower>> GetAll();
         Task Create(Borrower borrower);
         Task Update(int id, Borrower borrower);

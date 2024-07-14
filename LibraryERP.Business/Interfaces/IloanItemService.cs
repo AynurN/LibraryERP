@@ -9,9 +9,11 @@ namespace LibraryERP.Business.Interfaces
 {
     public interface IloanItemService
     {
+        Task Delete(int id);
+        Task<List<LoanItem>> GetLoanItemsByLoanId(int id);
         Task<List<LoanItem>> GetAll();
         Task Create(LoanItem loanItem);
-        Task BorrowBook(int bookId, int borrowerId);
-       
+        Task<LoanItem> GetLoanItemByBookId(int id);
+
     }
 }

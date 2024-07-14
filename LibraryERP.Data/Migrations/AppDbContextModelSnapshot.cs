@@ -54,6 +54,9 @@ namespace LibraryERP.Data.Migrations
                     b.Property<bool>("Avilability")
                         .HasColumnType("bit");
 
+                    b.Property<int>("BorrowCount")
+                        .HasColumnType("int");
+
                     b.Property<string>("Desc")
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
@@ -157,8 +160,7 @@ namespace LibraryERP.Data.Migrations
 
                     b.HasIndex("BookId");
 
-                    b.HasIndex("BorrowerId")
-                        .IsUnique();
+                    b.HasIndex("BorrowerId");
 
                     b.ToTable("Loans");
                 });
@@ -215,8 +217,8 @@ namespace LibraryERP.Data.Migrations
                         .HasForeignKey("BookId");
 
                     b.HasOne("LibraryERP.Core.Models.Borrower", "Borrower")
-                        .WithOne("Loan")
-                        .HasForeignKey("LibraryERP.Core.Models.Loan", "BorrowerId")
+                        .WithMany("Loans")
+                        .HasForeignKey("BorrowerId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -256,7 +258,7 @@ namespace LibraryERP.Data.Migrations
 
             modelBuilder.Entity("LibraryERP.Core.Models.Borrower", b =>
                 {
-                    b.Navigation("Loan");
+                    b.Navigation("Loans");
                 });
 
             modelBuilder.Entity("LibraryERP.Core.Models.Loan", b =>

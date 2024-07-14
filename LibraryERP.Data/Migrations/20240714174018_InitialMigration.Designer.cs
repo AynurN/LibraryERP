@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LibraryERP.Data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240713105722_InitialMigration")]
+    [Migration("20240714174018_InitialMigration")]
     partial class InitialMigration
     {
         /// <inheritdoc />
@@ -38,6 +38,9 @@ namespace LibraryERP.Data.Migrations
                         .HasMaxLength(150)
                         .HasColumnType("nvarchar(150)");
 
+                    b.Property<bool>("isDeleted")
+                        .HasColumnType("bit");
+
                     b.HasKey("Id");
 
                     b.ToTable("Authors");
@@ -54,17 +57,24 @@ namespace LibraryERP.Data.Migrations
                     b.Property<bool>("Avilability")
                         .HasColumnType("bit");
 
+                    b.Property<int>("BorrowCount")
+                        .HasColumnType("int");
+
                     b.Property<string>("Desc")
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
 
-                    b.Property<int>("PublishYear")
+                    b.Property<int?>("PublishYear")
+                        .IsRequired()
                         .HasColumnType("INT");
 
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasMaxLength(150)
                         .HasColumnType("nvarchar(150)");
+
+                    b.Property<bool>("isDeleted")
+                        .HasColumnType("bit");
 
                     b.HasKey("Id");
 
@@ -84,6 +94,9 @@ namespace LibraryERP.Data.Migrations
 
                     b.Property<int>("BookId")
                         .HasColumnType("int");
+
+                    b.Property<bool>("isDeleted")
+                        .HasColumnType("bit");
 
                     b.HasKey("Id");
 
@@ -111,6 +124,9 @@ namespace LibraryERP.Data.Migrations
                         .IsRequired()
                         .HasMaxLength(150)
                         .HasColumnType("nvarchar(150)");
+
+                    b.Property<bool>("isDeleted")
+                        .HasColumnType("bit");
 
                     b.HasKey("Id");
 
@@ -140,6 +156,9 @@ namespace LibraryERP.Data.Migrations
                     b.Property<DateTime?>("ReturnDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<bool>("isDeleted")
+                        .HasColumnType("bit");
+
                     b.HasKey("Id");
 
                     b.HasIndex("BookId");
@@ -162,6 +181,9 @@ namespace LibraryERP.Data.Migrations
 
                     b.Property<int>("LoanId")
                         .HasColumnType("int");
+
+                    b.Property<bool>("isDeleted")
+                        .HasColumnType("bit");
 
                     b.HasKey("Id");
 

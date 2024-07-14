@@ -25,7 +25,8 @@ namespace LibraryERP.Business.Implementations
                 throw new NullReferenceException("Book not found!");
             return b;
         }
-      
+       
+
 
         public async Task ChageDeleteStatus(int id)
         {
@@ -54,12 +55,31 @@ namespace LibraryERP.Business.Implementations
 
         public async Task<List<Book>> FilterBooksByAuthor(string authorName)
         {
-            return await _bookRepository.GetBooksByAuthorName(authorName).Where(x=>x.isDeleted==false).AsNoTracking().ToListAsync();
+            var books = await _bookRepository.GetAll().Include(x=>x.BookAuthors).ThenInclude(x=>x.Author).ToListAsync();
+            return books.Where(b => b.BookAuthors.Any(ab => ab.Author.FullName.Equals(authorName, StringComparison.OrdinalIgnoreCase))).ToList();
         }
 
         public async Task<List<Book>> FilterBooksByTitle(string title)
         {
-            return await _bookRepository.GetBooksByTitle(title).Where(x => x.isDeleted == false).AsNoTracking().ToListAsync();
+            var books = await _bookRepository.GetAll().ToListAsync();
+            return books.Where(b => b.Title.Equals(title, StringComparison.OrdinalIgnoreCase)).ToList();
+        }
+        public async Task<Book> GetMostBorrowedBook()
+        {
+            Book book = null;
+            int maxCount = 0;
+            List<Book> books = await GetAll();
+            foreach (var item in books)
+            {
+                if (item.BorrowCount > maxCount)
+                {
+                    maxCount = item.BorrowCount;
+                    book = item;
+
+                }
+                    
+            }
+            return book;
         }
 
         public async Task<List<Book>> GetAll()
@@ -67,8 +87,9 @@ namespace LibraryERP.Business.Implementations
             return await _bookRepository.GetAll().Where(x=>x.isDeleted==false).Include(x=>x.BookAuthors).ThenInclude(x=>x.Author).AsNoTracking().ToListAsync();
         }
 
-
-        public async Task Update(int id, Book book)
+      
+    
+    public async Task Update(int id, Book book)
         {
             var searched = await _bookRepository.Get(id);
             if (searched == null)
@@ -76,5 +97,16 @@ namespace LibraryERP.Business.Implementations
             searched.Title = book.Title;
             searched.Desc = book.Desc;
             await _bookRepository.CommitAsync();        }
+        public async Task UpdateEntire( Book book)
+        {
+            var searched = await _bookRepository.Get(book.Id);
+            if (searched == null)
+                throw new NullReferenceException("Book not found");
+            searched = book;
+            await _bookRepository.CommitAsync();
+        }
+
     }
+    
 }
+

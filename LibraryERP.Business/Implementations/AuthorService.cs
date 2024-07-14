@@ -18,6 +18,7 @@ namespace LibraryERP.Business.Implementations
         {
             authorRepository = new AuthorRepository();
         }
+       
         public  async Task ChageDeleteStatus(int id)
         {
             var author = await authorRepository.Get(id);
@@ -45,6 +46,14 @@ namespace LibraryERP.Business.Implementations
         public async Task<List<Author>> GetAll()
         {
             return await authorRepository.GetAll().Where(x=>x.isDeleted==false).Include(x=>x.BookAuthors).ThenInclude(x=>x.Book).AsNoTracking().ToListAsync();
+        }
+
+        public async Task<Author> GetAuthorById(int id)
+        {
+            Author? b = await authorRepository.Get(id);
+            if (b == null)
+                throw new NullReferenceException("Author not found!");
+            return b;
         }
 
         public async Task Update(int id, Author author)

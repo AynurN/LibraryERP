@@ -10,7 +10,7 @@ namespace LibraryERP.Core.Models
     {
         public string? FullName { get; set; }
         public string? Email { get; set; }
-        public Loan? Loan { get; set; }
+        public List<Loan> Loans { get; set; }
 
         public override string ToString()
         {

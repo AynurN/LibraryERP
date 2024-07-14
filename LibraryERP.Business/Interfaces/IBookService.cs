@@ -9,6 +9,8 @@ namespace LibraryERP.Business.Interfaces
 {
     public interface IBookService
     {
+        Task UpdateEntire(Book book);
+        Task<Book> GetMostBorrowedBook();
         Task<List<Book>> GetAll();
         Task Create(Book book);
         Task Update (int id, Book book);
