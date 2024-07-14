@@ -41,7 +41,7 @@ namespace LibraryERP.Business.Implementations
             {
                 item.Book.Avilability = true;
             }
-
+            loan.ReturnDate = DateTime.Now;
 
         }
     }

@@ -54,17 +54,17 @@ namespace LibraryERP.Business.Implementations
 
         public async Task<List<Book>> FilterBooksByAuthor(string authorName)
         {
-            return await _bookRepository.GetBooksByAuthorName(authorName).AsNoTracking().ToListAsync();
+            return await _bookRepository.GetBooksByAuthorName(authorName).Where(x=>x.isDeleted==false).AsNoTracking().ToListAsync();
         }
 
         public async Task<List<Book>> FilterBooksByTitle(string title)
         {
-            return await _bookRepository.GetBooksByTitle(title).AsNoTracking().ToListAsync();
+            return await _bookRepository.GetBooksByTitle(title).Where(x => x.isDeleted == false).AsNoTracking().ToListAsync();
         }
 
         public async Task<List<Book>> GetAll()
         {
-            return await _bookRepository.GetAll().Include(x=>x.BookAuthors).ThenInclude(x=>x.Author).AsNoTracking().ToListAsync();
+            return await _bookRepository.GetAll().Where(x=>x.isDeleted==false).Include(x=>x.BookAuthors).ThenInclude(x=>x.Author).AsNoTracking().ToListAsync();
         }
 
 

@@ -8,10 +8,13 @@ namespace LibraryERP.Core.Models
 {
     public class Borrower: BaseModel
     {
-        public string FullName { get; set; }
-        public string Email { get; set; }
-        public bool isDeleted { get; set; }
-        public Loan Loan { get; set; }
-       
+        public string? FullName { get; set; }
+        public string? Email { get; set; }
+        public Loan? Loan { get; set; }
+
+        public override string ToString()
+        {
+            return $"FullName:{FullName}, Email:{Email}";
+        }
     }
 }

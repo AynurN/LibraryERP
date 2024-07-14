@@ -44,7 +44,7 @@ namespace LibraryERP.Business.Implementations
 
         public async Task<List<Author>> GetAll()
         {
-            return await authorRepository.GetAll().Include(x=>x.BookAuthors).ThenInclude(x=>x.Book).AsNoTracking().ToListAsync();
+            return await authorRepository.GetAll().Where(x=>x.isDeleted==false).Include(x=>x.BookAuthors).ThenInclude(x=>x.Book).AsNoTracking().ToListAsync();
         }
 
         public async Task Update(int id, Author author)

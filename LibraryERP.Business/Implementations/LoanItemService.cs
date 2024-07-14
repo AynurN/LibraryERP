@@ -18,7 +18,7 @@ namespace LibraryERP.Business.Implementations
         {
             loanItemRepository = new LoandItemRepository();
         }
-        public async Task BorrowBook(int bookId, int borrowerId)
+        public async  Task BorrowBook(int bookId, int borrowerId)
         {
             IBookService bookService = new BookService();
             IBorrowerService borrowerService = new BorrowerService();
@@ -26,8 +26,11 @@ namespace LibraryERP.Business.Implementations
             Borrower borrower = await borrowerService.GetBorrowerById(borrowerId);
             if(book.isDeleted==false && book.Avilability == true)
             {
+
                 await Create(new LoanItem() { BookId = book.Id, LoanId = borrower.Loan.Id });
                 book.Avilability = false;
+               
+                await Console.Out.WriteLineAsync("Book borrowed");
             }
             else if(book.Avilability == false)
             {

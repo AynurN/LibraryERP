@@ -9,7 +9,6 @@ namespace LibraryERP.Core.Models
     public class Author  :BaseModel
     {
         public string FullName { get; set; }
-        public  bool isDeleted { get; set; }
         public List<BookAuthor> BookAuthors { get; set; }
         public override string ToString()
         {

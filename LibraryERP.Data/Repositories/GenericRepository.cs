@@ -34,7 +34,7 @@ namespace LibraryERP.Data.Repositories
 
         public async Task<T?> Get(int id)
         {
-           return await context.Set<T>().Where(x=>x.Id==id).FirstOrDefaultAsync();
+           return await context.Set<T>().Where(x=>x.isDeleted==false).Where(x=> x.Id==id).FirstOrDefaultAsync();
         }
 
 

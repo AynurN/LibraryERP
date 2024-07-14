@@ -53,7 +53,7 @@ namespace LibraryERP.Business.Implementations
 
         public async Task<List<Borrower>> GetAll()
         {
-            return await borrowerRepository.GetAll().AsNoTracking().ToListAsync();
+            return await borrowerRepository.GetAll().Where(x=>x.isDeleted==false).AsNoTracking().ToListAsync();
         }
 
         public async Task Update(int id, Borrower borrower)
