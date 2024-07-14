@@ -18,10 +18,22 @@ namespace LibraryERP.Business.Implementations
         {
             _bookRepository=new BookRepository();
         }
-        public Task BorrowBook(int bookId,int borrowerId)
+        public async Task<Book> GetBookById(int id)
         {
-           
-           
+            Book? b = await _bookRepository.Get(id);
+            if (b == null)
+                throw new NullReferenceException("Book not found!");
+            return b;
+        }
+      
+
+        public async Task ChageDeleteStatus(int id)
+        {
+            var book = await _bookRepository.Get(id);
+            if (book == null)
+                throw new NullReferenceException("Book not found!");
+            book.isDeleted = !(book.isDeleted);
+            await _bookRepository.CommitAsync();
         }
 
         public async Task Create(Book book)
@@ -52,13 +64,9 @@ namespace LibraryERP.Business.Implementations
 
         public async Task<List<Book>> GetAll()
         {
-            return await _bookRepository.GetAll().AsNoTracking().ToListAsync();
+            return await _bookRepository.GetAll().Include(x=>x.BookAuthors).ThenInclude(x=>x.Author).AsNoTracking().ToListAsync();
         }
 
-        public async Task ReturnBook(int bookId)
-        {
-           
-        }
 
         public async Task Update(int id, Book book)
         {
@@ -67,7 +75,6 @@ namespace LibraryERP.Business.Implementations
                 throw new NullReferenceException("Book not found");
             searched.Title = book.Title;
             searched.Desc = book.Desc;
-
-        }
+            await _bookRepository.CommitAsync();        }
     }
 }

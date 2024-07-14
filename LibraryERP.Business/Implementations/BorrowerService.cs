@@ -24,6 +24,13 @@ namespace LibraryERP.Business.Implementations
             await borrowerRepository.CommitAsync();
             
         }
+        public async Task<Borrower> GetBorrowerById(int id)
+        {
+            Borrower? b= await borrowerRepository.Get(id);
+            if (b == null)
+                throw new NullReferenceException("Borrower not found!");
+            return b;
+        }
 
         public async Task Delete(int id)
         {
@@ -31,6 +38,15 @@ namespace LibraryERP.Business.Implementations
             if (borrower == null)
                 throw new NullReferenceException("Borrower not found!");
             borrowerRepository.Delete(borrower);
+            await borrowerRepository.CommitAsync();
+
+        }
+        public async Task ChageDeleteStatus(int id)
+        {
+            var borrower = await borrowerRepository.Get(id);
+            if (borrower == null)
+                throw new NullReferenceException("Borrower not found!");
+            borrower.isDeleted = !(borrower.isDeleted);
             await borrowerRepository.CommitAsync();
 
         }
@@ -47,6 +63,7 @@ namespace LibraryERP.Business.Implementations
                 throw new NullReferenceException("Book not found");
             searched.FullName = borrower.FullName;
             searched.Email = borrower.Email;
+            await borrowerRepository.CommitAsync();
         }
     }
 }

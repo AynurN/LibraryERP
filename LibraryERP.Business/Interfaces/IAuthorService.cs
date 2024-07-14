@@ -9,9 +9,10 @@ namespace LibraryERP.Business.Interfaces
 {
     public interface IAuthorService
     {
-        Task<Author> GetAll();
+        Task<List<Author>> GetAll();
         Task Create(Author author);
         Task Update(int id,Author author);
-        void Delete(Author author);
+        Task Delete(int id);
+        Task ChageDeleteStatus(int id);
     }
 }

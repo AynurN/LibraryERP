@@ -13,7 +13,8 @@ namespace LibraryERP.Business.Interfaces
         Task Create(Borrower borrower);
         Task Update(int id, Borrower borrower);
         Task Delete(int id);
-       
+        Task<Borrower> GetBorrowerById(int id);
+        Task ChageDeleteStatus(int id);
 
 
     }

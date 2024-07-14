@@ -15,7 +15,8 @@ namespace LibraryERP.Business.Interfaces
         Task Delete(int id);
         Task<List<Book>> FilterBooksByTitle(string title);
         Task<List<Book>> FilterBooksByAuthor(string authorName);
-        Task BorrowBook(int bookId, int borrowerId);
-        Task ReturnBook(int bookId);
+        
+        Task ChageDeleteStatus(int id);
+        Task<Book> GetBookById(int id);
     }
 }

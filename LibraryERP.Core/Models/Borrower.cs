@@ -10,7 +10,8 @@ namespace LibraryERP.Core.Models
     {
         public string FullName { get; set; }
         public string Email { get; set; }
-        public List<Loan> Loans { get; set; }
+        public bool isDeleted { get; set; }
+        public Loan Loan { get; set; }
        
     }
 }

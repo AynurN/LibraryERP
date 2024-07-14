@@ -8,12 +8,22 @@ namespace LibraryERP.Core.Models
 {
     public class Book :BaseModel
     {
-        public string Title { get; set; }
-        public string Desc { get; set; }
-        public int PublishYear { get; set; }
-        public List<BookAuthor> BookAuthors { get; set; }
-        public List<Loan> Loans { get; set; }
+        public string? Title { get; set; }
+        public string? Desc { get; set; }
+        public int? PublishYear { get; set; }
+        public List<BookAuthor>? BookAuthors { get; set; }
+        public List<Loan>? Loans { get; set; }
         public bool isDeleted { get; set; }
         public bool Avilability { get; set; }
+        public override string ToString()
+        {
+            string authors = string.Empty;
+            foreach (var item in BookAuthors)
+            {
+                authors += item.Author.FullName + " ";
+
+            }
+            return $"ID:{Id}, Book:{Title}, Publish year:{PublishYear}, Authors:{authors}, Availability:{Avilability}";
+        }
     }
 }
