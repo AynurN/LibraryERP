@@ -1,0 +1,15 @@
+C:\Users\user\Desktop\Entity FW\LibraryERP\LibraryERP.Core\bin\Debug\net8.0\LibraryERP.Core.deps.json
+C:\Users\user\Desktop\Entity FW\LibraryERP\LibraryERP.Core\bin\Debug\net8.0\LibraryERP.Core.runtimeconfig.json
+C:\Users\user\Desktop\Entity FW\LibraryERP\LibraryERP.Core\bin\Debug\net8.0\LibraryERP.Core.dll
+C:\Users\user\Desktop\Entity FW\LibraryERP\LibraryERP.Core\bin\Debug\net8.0\LibraryERP.Core.pdb
+C:\Users\user\Desktop\Entity FW\LibraryERP\LibraryERP.Core\obj\Debug\net8.0\LibraryERP.Core.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\Entity FW\LibraryERP\LibraryERP.Core\obj\Debug\net8.0\LibraryERP.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\Entity FW\LibraryERP\LibraryERP.Core\obj\Debug\net8.0\LibraryERP.Core.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\Entity FW\LibraryERP\LibraryERP.Core\obj\Debug\net8.0\LibraryERP.Core.AssemblyInfo.cs
+C:\Users\user\Desktop\Entity FW\LibraryERP\LibraryERP.Core\obj\Debug\net8.0\LibraryERP.Core.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\Entity FW\LibraryERP\LibraryERP.Core\obj\Debug\net8.0\LibraryERP.Core.sourcelink.json
+C:\Users\user\Desktop\Entity FW\LibraryERP\LibraryERP.Core\obj\Debug\net8.0\LibraryERP.Core.dll
+C:\Users\user\Desktop\Entity FW\LibraryERP\LibraryERP.Core\obj\Debug\net8.0\refint\LibraryERP.Core.dll
+C:\Users\user\Desktop\Entity FW\LibraryERP\LibraryERP.Core\obj\Debug\net8.0\LibraryERP.Core.pdb
+C:\Users\user\Desktop\Entity FW\LibraryERP\LibraryERP.Core\obj\Debug\net8.0\LibraryERP.Core.genruntimeconfig.cache
+C:\Users\user\Desktop\Entity FW\LibraryERP\LibraryERP.Core\obj\Debug\net8.0\ref\LibraryERP.Core.dll
