@@ -56,9 +56,14 @@ namespace LibraryERP.Business.Implementations
         public async Task<List<Book>> FilterBooksByAuthor(string authorName)
         {
             var books = await _bookRepository.GetAll().Include(x=>x.BookAuthors).ThenInclude(x=>x.Author).ToListAsync();
-            return books.Where(b => b.BookAuthors.Any(ab => ab.Author.FullName.Equals(authorName, StringComparison.OrdinalIgnoreCase))).ToList();
+            return books.Where(x=>x.isDeleted==false).Where(b => b.BookAuthors.Any(ab => ab.Author.FullName.Equals(authorName, StringComparison.OrdinalIgnoreCase))).ToList();
         }
-
+        public async Task GetBooksByAuthor(int authorId)
+        {
+            var books = await _bookRepository.GetAll().Include(x => x.BookAuthors).ThenInclude(x => x.Author).ToListAsync();
+            List<Book> b= books.Where(b => b.BookAuthors.Any(ab => ab.Author.Id==authorId )).Where(x=>x.isDeleted==false).ToList();
+            b.ForEach(x => Console.Write(x.Title+" "));
+        }
         public async Task<List<Book>> FilterBooksByTitle(string title)
         {
             var books = await _bookRepository.GetAll().ToListAsync();
@@ -90,9 +95,26 @@ namespace LibraryERP.Business.Implementations
             var searched = await _bookRepository.Get(id);
             if (searched == null)
                 throw new NullReferenceException("Book not found");
-            searched.Title = book.Title;
-            searched.Desc = book.Desc;
-            await _bookRepository.CommitAsync();        }
+            if (searched.isDeleted == false)
+            {
+                if (book.Title == null)
+                {
+                    searched.Desc = book.Desc;
+                }
+                if (book.Desc == null)
+                {
+                    searched.Title = book.Title;
+                }
+
+            }
+            else
+            {
+                await Console.Out.WriteLineAsync("Book not found!");
+            }
+           
+            
+           
+     await _bookRepository.CommitAsync();        }
         public async Task UpdateEntire( Book book)
         {
             var searched = await _bookRepository.Get(book.Id);
@@ -101,6 +123,7 @@ namespace LibraryERP.Business.Implementations
             searched = book;
             await _bookRepository.CommitAsync();
         }
+       
 
     }
     

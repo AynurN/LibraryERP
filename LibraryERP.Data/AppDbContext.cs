@@ -28,7 +28,7 @@ namespace LibraryERP.Data
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=SIRIUS05;Database=LibraryERPNewad;Trusted_Connection=True;TrustServerCertificate=True");
+            optionsBuilder.UseSqlServer("Server=WIN-S7KB46T76ET;Database=LIbRARY.ERP;Trusted_Connection=True;TrustServerCertificate=True");
             base.OnConfiguring(optionsBuilder);
         }
     }

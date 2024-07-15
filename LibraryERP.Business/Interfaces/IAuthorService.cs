@@ -9,6 +9,7 @@ namespace LibraryERP.Business.Interfaces
 {
     public interface IAuthorService
     {
+        Task GetAuthorsByBook(int bookId);
         Task<Author> GetAuthorById(int id);
         Task<List<Author>> GetAll();
         Task Create(Author author);

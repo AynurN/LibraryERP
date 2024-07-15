@@ -12,13 +12,7 @@ namespace LibraryERP.Core.Models
         public List<BookAuthor> BookAuthors { get; set; }
         public override string ToString()
         {
-            string books = string.Empty;
-            foreach (var item in BookAuthors)
-            {
-                books += item.Book.Title+" ";
-                
-            }
-            return $"ID:{Id}, FullName:{FullName}, Books:{books}";
+            return $"ID:{Id}, FullName:{FullName}";
         }
     }
 }

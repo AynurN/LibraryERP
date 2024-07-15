@@ -123,7 +123,7 @@ namespace LibraryERP.Business.Implementations
                 return;
             }
             await Console.Out.WriteLineAsync("Choose id of active loan:");
-            List<Loan> loans = await GetByBorrowerId(borrowerId);
+            List<Loan> loans = await GetByBorrowerIdReturnable(borrowerId);
             foreach (var item in loans)
             {
                 await Console.Out.WriteLineAsync($"{item.Id}, LoanDate: {item.LoanDate}, MustReturnDate:{item.MustReturnDate}");
@@ -165,9 +165,13 @@ namespace LibraryERP.Business.Implementations
             await loanRepository.CommitAsync();
         }
 
-        public async Task<List<Loan>> GetByBorrowerId(int id)
+        public async Task<List<Loan>> GetByBorrowerIdReturnable(int id)
         {
-            return await loanRepository.GetAll().Include(x => x.Borrower).Include(x => x.LoanItems).ThenInclude(x=>x.Book).Where(x => x.ReturnDate==null).Where(x=>x.BorrowerId==id).AsNoTracking().ToListAsync();
+            return await loanRepository.GetAll().Include(x => x.Borrower).Include(x => x.LoanItems).ThenInclude(x=>x.Book).Where(x => x.ReturnDate == null).Where(x=>x.BorrowerId==id).AsNoTracking().ToListAsync();
+        }
+         public async Task<List<Loan>> GetByBorrowerId(int id)
+        {
+            return await loanRepository.GetAll().Include(x => x.Borrower).Include(x => x.LoanItems).ThenInclude(x=>x.Book).Where(x=>x.BorrowerId==id).AsNoTracking().ToListAsync();
         }
 
     }

@@ -60,9 +60,18 @@ namespace LibraryERP.Business.Implementations
         {
             var searched = await authorRepository.Get(id);
             if (searched == null)
-                throw new NullReferenceException("Book not found");
+                throw new NullReferenceException("Author not found");
+            if(searched.isDeleted==false)
             searched.FullName = author.FullName;
+            else
+                await Console.Out.WriteLineAsync("Author not found!");
             await authorRepository.CommitAsync();
+        }
+        public async Task GetAuthorsByBook(int bookId)
+        {
+            var authors = await authorRepository.GetAll().Include(x => x.BookAuthors).ThenInclude(x => x.Book).ToListAsync();
+            List<Author> b = authors.Where(b => b.BookAuthors.Any(ab => ab.Book.Id == bookId)).Where(x => x.isDeleted == false).ToList();
+            b.ForEach(x => Console.Write(x.FullName + " "));
         }
     }
 }

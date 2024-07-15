@@ -16,13 +16,9 @@ namespace LibraryERP.Core.Models
         public bool Avilability { get; set; } 
         public override string ToString()
         {
-            string authors = string.Empty;
-            foreach (var item in BookAuthors)
-            {
-                authors += item.Author.FullName + " ";
-
-            }
-            return $"ID:{Id}, Book:{Title}, Publish year:{PublishYear}, Authors:{authors}, Availability:{Avilability}";
+            
+   
+            return $"ID:{Id}, Book:{Title}, Publish year:{PublishYear}, Availability:{Avilability}";
         }
     }
 }

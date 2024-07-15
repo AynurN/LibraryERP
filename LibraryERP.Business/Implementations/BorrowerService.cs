@@ -62,8 +62,24 @@ namespace LibraryERP.Business.Implementations
             var searched = await borrowerRepository.Get(id);
             if (searched == null)
                 throw new NullReferenceException("Book not found");
-            searched.FullName = borrower.FullName;
-            searched.Email = borrower.Email;
+            if (searched.isDeleted == false)
+            {
+                if (borrower.Email == null)
+                {
+                    searched.FullName = borrower.FullName;
+                }
+                else if (borrower.FullName == null)
+                {
+                    searched.Email = borrower.Email;
+
+                }
+            }
+            else
+            {
+                await Console.Out.WriteLineAsync("Borrower not found!");
+            }
+           
+           
             await borrowerRepository.CommitAsync();
         }
 
