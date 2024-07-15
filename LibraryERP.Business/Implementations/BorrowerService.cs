@@ -26,7 +26,7 @@ namespace LibraryERP.Business.Implementations
         }
         public async Task<Borrower> GetBorrowerById(int id)
         {
-            Borrower? b= await borrowerRepository.Get(id);
+            Borrower? b= await borrowerRepository.GetAll().Include(x=>x.Loans).FirstOrDefaultAsync(x=>x.Id==id);
             if (b == null)
                 throw new NullReferenceException("Borrower not found!");
             return b;

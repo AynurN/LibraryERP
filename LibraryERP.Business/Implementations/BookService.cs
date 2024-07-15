@@ -66,20 +66,16 @@ namespace LibraryERP.Business.Implementations
         }
         public async Task<Book> GetMostBorrowedBook()
         {
-            Book book = null;
-            int maxCount = 0;
             List<Book> books = await GetAll();
-            foreach (var item in books)
-            {
-                if (item.BorrowCount > maxCount)
-                {
-                    maxCount = item.BorrowCount;
-                    book = item;
 
-                }
-                    
+            if (books == null || books.Count == 0)
+            {
+                throw new InvalidOperationException("No books found.");
             }
-            return book;
+
+            Book mostBorrowedBook = books.OrderByDescending(b => b.BorrowCount).FirstOrDefault();
+
+            return mostBorrowedBook ?? throw new InvalidOperationException("No borrowed books found.");
         }
 
         public async Task<List<Book>> GetAll()

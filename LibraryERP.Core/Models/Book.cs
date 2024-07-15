@@ -13,7 +13,6 @@ namespace LibraryERP.Core.Models
         public string? Desc { get; set; }
         public int? PublishYear { get; set; }
         public List<BookAuthor> BookAuthors { get; set; }
-        public List<Loan>? Loans { get; set; }
         public bool Avilability { get; set; } 
         public override string ToString()
         {

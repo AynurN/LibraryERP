@@ -4,6 +4,7 @@ using LibraryERP.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LibraryERP.Data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240715063415_LoanUpdated")]
+    partial class LoanUpdated
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -138,6 +141,9 @@ namespace LibraryERP.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<int?>("BookId")
+                        .HasColumnType("int");
+
                     b.Property<int>("BorrowerId")
                         .HasColumnType("int");
 
@@ -154,6 +160,8 @@ namespace LibraryERP.Data.Migrations
                         .HasColumnType("bit");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("BookId");
 
                     b.HasIndex("BorrowerId");
 
@@ -207,6 +215,10 @@ namespace LibraryERP.Data.Migrations
 
             modelBuilder.Entity("LibraryERP.Core.Models.Loan", b =>
                 {
+                    b.HasOne("LibraryERP.Core.Models.Book", null)
+                        .WithMany("Loans")
+                        .HasForeignKey("BookId");
+
                     b.HasOne("LibraryERP.Core.Models.Borrower", "Borrower")
                         .WithMany("Loans")
                         .HasForeignKey("BorrowerId")
@@ -243,6 +255,8 @@ namespace LibraryERP.Data.Migrations
             modelBuilder.Entity("LibraryERP.Core.Models.Book", b =>
                 {
                     b.Navigation("BookAuthors");
+
+                    b.Navigation("Loans");
                 });
 
             modelBuilder.Entity("LibraryERP.Core.Models.Borrower", b =>

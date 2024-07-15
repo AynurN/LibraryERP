@@ -23,8 +23,8 @@ namespace LibraryERP.CA
                 "4.Borrow book\n" +
                
                 "5.Return book\n" +
-                "6.Bring book most borrowing\n" +
-                "7.Bring borrowers who is late\\n" +
+                "6.Bring  most borrowed book\n" +
+                "7.Bring borrowers who is late\n" +
                 "8.Bring borrowers and books\n" +
                 "9.Filter books by Titles\n" +
                 "10.Filter books by Author Fullname\n" +
@@ -513,7 +513,8 @@ namespace LibraryERP.CA
                     {
                         try
                         {
-                            await Console.Out.WriteLineAsync(book.GetMostBorrowedBook().ToString());
+                         Book b= await book.GetMostBorrowedBook();
+                            await Console.Out.WriteLineAsync(b.Title);
                         }
                         catch(Exception ex)
                         {

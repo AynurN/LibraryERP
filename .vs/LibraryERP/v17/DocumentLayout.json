@@ -3,60 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\user\\Desktop\\Entity FW\\LibraryERP\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{849E7D7C-8DE8-497F-A29B-2E7810E5671F}|LibraryERP.Business\\LibraryERP.Business.csproj|c:\\users\\user\\desktop\\entity fw\\libraryerp\\libraryerp.business\\implementations\\loanservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{849E7D7C-8DE8-497F-A29B-2E7810E5671F}|LibraryERP.Business\\LibraryERP.Business.csproj|solutionrelative:libraryerp.business\\implementations\\loanservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E5704C07-4FE0-4933-AB34-46FA5D96A0A5}|LibraryERP.CA\\LibraryERP.CA.csproj|c:\\users\\user\\desktop\\entity fw\\libraryerp\\libraryerp.ca\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E5704C07-4FE0-4933-AB34-46FA5D96A0A5}|LibraryERP.CA\\LibraryERP.CA.csproj|solutionrelative:libraryerp.ca\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{849E7D7C-8DE8-497F-A29B-2E7810E5671F}|LibraryERP.Business\\LibraryERP.Business.csproj|c:\\users\\user\\desktop\\entity fw\\libraryerp\\libraryerp.business\\interfaces\\iloanservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{849E7D7C-8DE8-497F-A29B-2E7810E5671F}|LibraryERP.Business\\LibraryERP.Business.csproj|solutionrelative:libraryerp.business\\interfaces\\iloanservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{849E7D7C-8DE8-497F-A29B-2E7810E5671F}|LibraryERP.Business\\LibraryERP.Business.csproj|c:\\users\\user\\desktop\\entity fw\\libraryerp\\libraryerp.business\\implementations\\loanitemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{849E7D7C-8DE8-497F-A29B-2E7810E5671F}|LibraryERP.Business\\LibraryERP.Business.csproj|solutionrelative:libraryerp.business\\implementations\\loanitemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{849E7D7C-8DE8-497F-A29B-2E7810E5671F}|LibraryERP.Business\\LibraryERP.Business.csproj|c:\\users\\user\\desktop\\entity fw\\libraryerp\\libraryerp.business\\interfaces\\iloanitemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{849E7D7C-8DE8-497F-A29B-2E7810E5671F}|LibraryERP.Business\\LibraryERP.Business.csproj|solutionrelative:libraryerp.business\\interfaces\\iloanitemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{849E7D7C-8DE8-497F-A29B-2E7810E5671F}|LibraryERP.Business\\LibraryERP.Business.csproj|c:\\users\\user\\desktop\\entity fw\\libraryerp\\libraryerp.business\\implementations\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{849E7D7C-8DE8-497F-A29B-2E7810E5671F}|LibraryERP.Business\\LibraryERP.Business.csproj|solutionrelative:libraryerp.business\\implementations\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{849E7D7C-8DE8-497F-A29B-2E7810E5671F}|LibraryERP.Business\\LibraryERP.Business.csproj|c:\\users\\user\\desktop\\entity fw\\libraryerp\\libraryerp.business\\interfaces\\ibookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{849E7D7C-8DE8-497F-A29B-2E7810E5671F}|LibraryERP.Business\\LibraryERP.Business.csproj|solutionrelative:libraryerp.business\\interfaces\\ibookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{849E7D7C-8DE8-497F-A29B-2E7810E5671F}|LibraryERP.Business\\LibraryERP.Business.csproj|c:\\users\\user\\desktop\\entity fw\\libraryerp\\libraryerp.business\\implementations\\borrowerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{849E7D7C-8DE8-497F-A29B-2E7810E5671F}|LibraryERP.Business\\LibraryERP.Business.csproj|solutionrelative:libraryerp.business\\implementations\\borrowerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{340E787E-8169-4FCE-9986-8574F5854D92}|LibraryERP.Core\\LibraryERP.Core.csproj|c:\\users\\user\\desktop\\entity fw\\libraryerp\\libraryerp.core\\models\\loan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{340E787E-8169-4FCE-9986-8574F5854D92}|LibraryERP.Core\\LibraryERP.Core.csproj|solutionrelative:libraryerp.core\\models\\loan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{849E7D7C-8DE8-497F-A29B-2E7810E5671F}|LibraryERP.Business\\LibraryERP.Business.csproj|c:\\users\\user\\desktop\\entity fw\\libraryerp\\libraryerp.business\\implementations\\loanservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{849E7D7C-8DE8-497F-A29B-2E7810E5671F}|LibraryERP.Business\\LibraryERP.Business.csproj|solutionrelative:libraryerp.business\\implementations\\loanservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user\\Desktop\\Entity FW\\LibraryERP\\LibraryERP.Data\\Migrations\\20240714174018_InitialMigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:LibraryERP.Data\\Migrations\\20240714174018_InitialMigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{340E787E-8169-4FCE-9986-8574F5854D92}|LibraryERP.Core\\LibraryERP.Core.csproj|c:\\users\\user\\desktop\\entity fw\\libraryerp\\libraryerp.core\\configurations\\borrowerconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{340E787E-8169-4FCE-9986-8574F5854D92}|LibraryERP.Core\\LibraryERP.Core.csproj|solutionrelative:libraryerp.core\\configurations\\borrowerconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{340E787E-8169-4FCE-9986-8574F5854D92}|LibraryERP.Core\\LibraryERP.Core.csproj|c:\\users\\user\\desktop\\entity fw\\libraryerp\\libraryerp.core\\configurations\\loanconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{340E787E-8169-4FCE-9986-8574F5854D92}|LibraryERP.Core\\LibraryERP.Core.csproj|solutionrelative:libraryerp.core\\configurations\\loanconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FDA1F750-2BBB-4A65-9701-F9170B1302E2}|LibraryERP.Data\\LibraryERP.Data.csproj|c:\\users\\user\\desktop\\entity fw\\libraryerp\\libraryerp.data\\migrations\\20240714174018_initialmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FDA1F750-2BBB-4A65-9701-F9170B1302E2}|LibraryERP.Data\\LibraryERP.Data.csproj|solutionrelative:libraryerp.data\\migrations\\20240714174018_initialmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FDA1F750-2BBB-4A65-9701-F9170B1302E2}|LibraryERP.Data\\LibraryERP.Data.csproj|c:\\users\\user\\desktop\\entity fw\\libraryerp\\libraryerp.data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FDA1F750-2BBB-4A65-9701-F9170B1302E2}|LibraryERP.Data\\LibraryERP.Data.csproj|solutionrelative:libraryerp.data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{340E787E-8169-4FCE-9986-8574F5854D92}|LibraryERP.Core\\LibraryERP.Core.csproj|c:\\users\\user\\desktop\\entity fw\\libraryerp\\libraryerp.core\\models\\borrower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{340E787E-8169-4FCE-9986-8574F5854D92}|LibraryERP.Core\\LibraryERP.Core.csproj|solutionrelative:libraryerp.core\\models\\borrower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FDA1F750-2BBB-4A65-9701-F9170B1302E2}|LibraryERP.Data\\LibraryERP.Data.csproj|c:\\users\\user\\desktop\\entity fw\\libraryerp\\libraryerp.data\\migrations\\appdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FDA1F750-2BBB-4A65-9701-F9170B1302E2}|LibraryERP.Data\\LibraryERP.Data.csproj|solutionrelative:libraryerp.data\\migrations\\appdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDA1F750-2BBB-4A65-9701-F9170B1302E2}|LibraryERP.Data\\LibraryERP.Data.csproj|c:\\users\\user\\desktop\\entity fw\\libraryerp\\libraryerp.data\\migrations\\20240715063415_loanupdated.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FDA1F750-2BBB-4A65-9701-F9170B1302E2}|LibraryERP.Data\\LibraryERP.Data.csproj|solutionrelative:libraryerp.data\\migrations\\20240715063415_loanupdated.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -66,186 +42,108 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "LoanItemService.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Entity FW\\LibraryERP\\LibraryERP.Business\\Implementations\\LoanItemService.cs",
-              "RelativeDocumentMoniker": "LibraryERP.Business\\Implementations\\LoanItemService.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Entity FW\\LibraryERP\\LibraryERP.Business\\Implementations\\LoanItemService.cs",
-              "RelativeToolTip": "LibraryERP.Business\\Implementations\\LoanItemService.cs",
-              "ViewState": "AQIAABcAAAAAAAAAAAAAACAAAAAwAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-14T18:53:05.572Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IloanItemService.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Entity FW\\LibraryERP\\LibraryERP.Business\\Interfaces\\IloanItemService.cs",
-              "RelativeDocumentMoniker": "LibraryERP.Business\\Interfaces\\IloanItemService.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Entity FW\\LibraryERP\\LibraryERP.Business\\Interfaces\\IloanItemService.cs",
-              "RelativeToolTip": "LibraryERP.Business\\Interfaces\\IloanItemService.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAAAAsAAAAcAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-14T18:52:34.804Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "IBookService.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Entity FW\\LibraryERP\\LibraryERP.Business\\Interfaces\\IBookService.cs",
-              "RelativeDocumentMoniker": "LibraryERP.Business\\Interfaces\\IBookService.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Entity FW\\LibraryERP\\LibraryERP.Business\\Interfaces\\IBookService.cs",
-              "RelativeToolTip": "LibraryERP.Business\\Interfaces\\IBookService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAlAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-14T18:39:53.184Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "BookService.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\Entity FW\\LibraryERP\\LibraryERP.Business\\Implementations\\BookService.cs",
               "RelativeDocumentMoniker": "LibraryERP.Business\\Implementations\\BookService.cs",
               "ToolTip": "C:\\Users\\user\\Desktop\\Entity FW\\LibraryERP\\LibraryERP.Business\\Implementations\\BookService.cs",
               "RelativeToolTip": "LibraryERP.Business\\Implementations\\BookService.cs",
-              "ViewState": "AQIAAF4AAAAAAAAAAAAAAGkAAAAwAAAA",
+              "ViewState": "AQIAAD8AAAAAAAAAAAAAAE0AAABnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-14T18:33:18.38Z",
+              "WhenOpened": "2024-07-15T07:06:48.102Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ILoanService.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Entity FW\\LibraryERP\\LibraryERP.Business\\Interfaces\\ILoanService.cs",
-              "RelativeDocumentMoniker": "LibraryERP.Business\\Interfaces\\ILoanService.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Entity FW\\LibraryERP\\LibraryERP.Business\\Interfaces\\ILoanService.cs",
-              "RelativeToolTip": "LibraryERP.Business\\Interfaces\\ILoanService.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAAAA8AAAAZAAAA",
+              "Title": "BorrowerService.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Entity FW\\LibraryERP\\LibraryERP.Business\\Implementations\\BorrowerService.cs",
+              "RelativeDocumentMoniker": "LibraryERP.Business\\Implementations\\BorrowerService.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Entity FW\\LibraryERP\\LibraryERP.Business\\Implementations\\BorrowerService.cs",
+              "RelativeToolTip": "LibraryERP.Business\\Implementations\\BorrowerService.cs",
+              "ViewState": "AQIAAEAAAAAAAAAAAAAAAEoAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-14T18:01:27.759Z",
+              "WhenOpened": "2024-07-15T06:50:55.346Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 6,
+              "Title": "AppDbContextModelSnapshot.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Entity FW\\LibraryERP\\LibraryERP.Data\\Migrations\\AppDbContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "LibraryERP.Data\\Migrations\\AppDbContextModelSnapshot.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Entity FW\\LibraryERP\\LibraryERP.Data\\Migrations\\AppDbContextModelSnapshot.cs",
+              "RelativeToolTip": "LibraryERP.Data\\Migrations\\AppDbContextModelSnapshot.cs",
+              "ViewState": "AQIAAHUAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-15T06:36:38.129Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "20240715063415_LoanUpdated.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Entity FW\\LibraryERP\\LibraryERP.Data\\Migrations\\20240715063415_LoanUpdated.cs",
+              "RelativeDocumentMoniker": "LibraryERP.Data\\Migrations\\20240715063415_LoanUpdated.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Entity FW\\LibraryERP\\LibraryERP.Data\\Migrations\\20240715063415_LoanUpdated.cs",
+              "RelativeToolTip": "LibraryERP.Data\\Migrations\\20240715063415_LoanUpdated.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-15T06:34:16.513Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "20240714174018_InitialMigration.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\Entity FW\\LibraryERP\\LibraryERP.Data\\Migrations\\20240714174018_InitialMigration.cs",
               "RelativeDocumentMoniker": "LibraryERP.Data\\Migrations\\20240714174018_InitialMigration.cs",
               "ToolTip": "C:\\Users\\user\\Desktop\\Entity FW\\LibraryERP\\LibraryERP.Data\\Migrations\\20240714174018_InitialMigration.cs",
               "RelativeToolTip": "LibraryERP.Data\\Migrations\\20240714174018_InitialMigration.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAH4AAAAAAAAAAAAAAFoAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-14T17:40:18.595Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "LoanService.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\Entity FW\\LibraryERP\\LibraryERP.Business\\Implementations\\LoanService.cs",
               "RelativeDocumentMoniker": "LibraryERP.Business\\Implementations\\LoanService.cs",
               "ToolTip": "C:\\Users\\user\\Desktop\\Entity FW\\LibraryERP\\LibraryERP.Business\\Implementations\\LoanService.cs",
               "RelativeToolTip": "LibraryERP.Business\\Implementations\\LoanService.cs",
-              "ViewState": "AQIAACYAAAAAAAAAAAAAAHMAAAAXAAAA",
+              "ViewState": "AQIAAHAAAAAAAAAAAAAAAHYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-14T17:38:38.771Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "BorrowerService.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Entity FW\\LibraryERP\\LibraryERP.Business\\Implementations\\BorrowerService.cs",
-              "RelativeDocumentMoniker": "LibraryERP.Business\\Implementations\\BorrowerService.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Entity FW\\LibraryERP\\LibraryERP.Business\\Implementations\\BorrowerService.cs",
-              "RelativeToolTip": "LibraryERP.Business\\Implementations\\BorrowerService.cs",
-              "ViewState": "AQIAAD0AAAAAAAAAAAAcwE0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-14T17:36:07.182Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "BorrowerConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Entity FW\\LibraryERP\\LibraryERP.Core\\Configurations\\BorrowerConfiguration.cs",
-              "RelativeDocumentMoniker": "LibraryERP.Core\\Configurations\\BorrowerConfiguration.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Entity FW\\LibraryERP\\LibraryERP.Core\\Configurations\\BorrowerConfiguration.cs",
-              "RelativeToolTip": "LibraryERP.Core\\Configurations\\BorrowerConfiguration.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAAAAABAAAABKAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-14T17:31:23.091Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "LoanConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Entity FW\\LibraryERP\\LibraryERP.Core\\Configurations\\LoanConfiguration.cs",
-              "RelativeDocumentMoniker": "LibraryERP.Core\\Configurations\\LoanConfiguration.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Entity FW\\LibraryERP\\LibraryERP.Core\\Configurations\\LoanConfiguration.cs",
-              "RelativeToolTip": "LibraryERP.Core\\Configurations\\LoanConfiguration.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAAAAABEAAAAyAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-14T17:30:53.953Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 5,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\Entity FW\\LibraryERP\\LibraryERP.Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "LibraryERP.Data\\AppDbContext.cs",
               "ToolTip": "C:\\Users\\user\\Desktop\\Entity FW\\LibraryERP\\LibraryERP.Data\\AppDbContext.cs",
               "RelativeToolTip": "LibraryERP.Data\\AppDbContext.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAB4AAABYAAAA",
+              "ViewState": "AQIAABEAAAAAAAAAAAAAABkAAABhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-14T17:28:46.301Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Loan.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Entity FW\\LibraryERP\\LibraryERP.Core\\Models\\Loan.cs",
-              "RelativeDocumentMoniker": "LibraryERP.Core\\Models\\Loan.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Entity FW\\LibraryERP\\LibraryERP.Core\\Models\\Loan.cs",
-              "RelativeToolTip": "LibraryERP.Core\\Models\\Loan.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-14T17:27:27.559Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Borrower.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Entity FW\\LibraryERP\\LibraryERP.Core\\Models\\Borrower.cs",
-              "RelativeDocumentMoniker": "LibraryERP.Core\\Models\\Borrower.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Entity FW\\LibraryERP\\LibraryERP.Core\\Models\\Borrower.cs",
-              "RelativeToolTip": "LibraryERP.Core\\Models\\Borrower.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAAABMAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-14T12:15:43.342Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\Entity FW\\LibraryERP\\LibraryERP.CA\\Program.cs",
               "RelativeDocumentMoniker": "LibraryERP.CA\\Program.cs",
               "ToolTip": "C:\\Users\\user\\Desktop\\Entity FW\\LibraryERP\\LibraryERP.CA\\Program.cs",
               "RelativeToolTip": "LibraryERP.CA\\Program.cs",
-              "ViewState": "AQIAAOwBAAAAAAAAAAAAAPEBAAAVAAAA",
+              "ViewState": "AQIAANEBAAAAAAAAAAAAABUAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-14T07:04:57.679Z",
               "EditorCaption": ""

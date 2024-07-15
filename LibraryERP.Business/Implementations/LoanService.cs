@@ -98,7 +98,7 @@ namespace LibraryERP.Business.Implementations
             return b;
         }
 
-       
+
         public async Task ReturnBooks()
         {
             await Console.Out.WriteLineAsync("Choose id of borrower:");
@@ -110,28 +110,31 @@ namespace LibraryERP.Business.Implementations
 
             int borrowerId = Convert.ToInt32(Console.ReadLine());
             Borrower borrower = await borrowerService.GetBorrowerById(borrowerId);
-            if (borrower.Loans == null || borrower.Loans.Count==0)
+
+            if (borrower.Loans == null || borrower.Loans.Count == 0)
             {
                 await Console.Out.WriteLineAsync("Borrower does not have any loans.");
                 return;
             }
+
             foreach (var loan in borrower.Loans)
             {
-                
                 List<LoanItem> loanItems = await loanItemService.GetLoanItemsByLoanId(loan.Id);
+
                 foreach (var loanItem in loanItems)
                 {
                     Book book = await bookService.GetBookById(loanItem.BookId);
-                    book.Avilability = true; 
-                    await bookService.UpdateEntire(book);
+                    book.Avilability = true;
+                    await bookService.UpdateEntire(book); 
 
-                    await loanItemService.Delete(loanItem.Id); 
+                    await loanItemService.Delete(loanItem.Id);
                 }
+
                 loan.ReturnDate = DateTime.Now;
                 await UpdateEntire(loan); 
             }
 
-            await loanRepository.CommitAsync();
+            await loanRepository.CommitAsync(); 
 
             await Console.Out.WriteLineAsync("Books Returned");
         }
