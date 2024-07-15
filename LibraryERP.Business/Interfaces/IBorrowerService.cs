@@ -17,6 +17,6 @@ namespace LibraryERP.Business.Interfaces
         Task<Borrower> GetBorrowerById(int id);
         Task ChageDeleteStatus(int id);
 
-
+        Task GetBorrowersAndBooks();
     }
 }

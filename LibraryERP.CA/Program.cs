@@ -544,10 +544,10 @@ namespace LibraryERP.CA
                     goto label1;
                 case 8:
                     {
-
+                        await borrower.GetBorrowersAndBooks();
                     }
                     goto label1;
-            case 9:
+                case 9:
                     {
                         try
                         {

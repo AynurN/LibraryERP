@@ -18,6 +18,7 @@ namespace LibraryERP.Business.Implementations
         {
             borrowerRepository = new BorrowerRepository();
         }
+     
         public async Task Create(Borrower borrower)
         {
             await borrowerRepository.Insert(borrower);
@@ -73,5 +74,28 @@ namespace LibraryERP.Business.Implementations
                                     .Where(b => b.Loans.Any(l => l.MustReturnDate < DateTime.Now))
                                     .ToListAsync();
         }
+
+     
+        public async Task GetBorrowersAndBooks()
+        {
+            IloanItemService loanItemService = new LoanItemService();
+            ILoanService loanService = new LoanService();
+          List<Borrower> borrowers=await borrowerRepository.GetAll().Include(x=>x.Loans).ThenInclude(x=>x.LoanItems).ThenInclude(x=>x.Book).ToListAsync();
+            foreach (var item in borrowers)
+            {
+                await Console.Out.WriteLineAsync(item.FullName+": ");
+                List<Loan> loans = await loanService.GetByBorrowerId(item.Id);
+                    foreach (Loan loan in loans) {
+                    List<LoanItem> loanItems = await loanItemService.GetLoanItemsByLoanId(item.Id);
+                    foreach (var item1 in loanItems)
+                    {
+                        await Console.Out.WriteAsync(item1.Book.Title+" ");
+                    }
+                }
+                await Console.Out.WriteAsync("\n");
+            }
+        }
+
+        }
     }
-}
+

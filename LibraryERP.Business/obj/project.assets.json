@@ -89,12 +89,12 @@
         },
         "compile": {
           "lib/netcoreapp3.1/_._": {
-            "related": ".xml;.pdb"
+            "related": ".pdb;.xml"
           }
         },
         "runtime": {
           "lib/netcoreapp3.1/Microsoft.CodeAnalysis.dll": {
-            "related": ".xml;.pdb"
+            "related": ".pdb;.xml"
           }
         },
         "resource": {
@@ -146,12 +146,12 @@
         },
         "compile": {
           "lib/netcoreapp3.1/_._": {
-            "related": ".xml;.pdb"
+            "related": ".pdb;.xml"
           }
         },
         "runtime": {
           "lib/netcoreapp3.1/Microsoft.CodeAnalysis.CSharp.dll": {
-            "related": ".xml;.pdb"
+            "related": ".pdb;.xml"
           }
         },
         "resource": {
@@ -206,12 +206,12 @@
         },
         "compile": {
           "lib/netcoreapp3.1/_._": {
-            "related": ".xml;.pdb"
+            "related": ".pdb;.xml"
           }
         },
         "runtime": {
           "lib/netcoreapp3.1/Microsoft.CodeAnalysis.CSharp.Workspaces.dll": {
-            "related": ".xml;.pdb"
+            "related": ".pdb;.xml"
           }
         },
         "resource": {
@@ -268,12 +268,12 @@
         },
         "compile": {
           "lib/netcoreapp3.1/_._": {
-            "related": ".xml;.pdb"
+            "related": ".pdb;.xml"
           }
         },
         "runtime": {
           "lib/netcoreapp3.1/Microsoft.CodeAnalysis.Workspaces.dll": {
-            "related": ".xml;.pdb"
+            "related": ".pdb;.xml"
           }
         },
         "resource": {
@@ -346,12 +346,12 @@
         },
         "compile": {
           "ref/net6.0/Microsoft.Data.SqlClient.dll": {
-            "related": ".xml;.pdb"
+            "related": ".pdb;.xml"
           }
         },
         "runtime": {
           "lib/net6.0/Microsoft.Data.SqlClient.dll": {
-            "related": ".xml;.pdb"
+            "related": ".pdb;.xml"
           }
         },
         "runtimeTargets": {
@@ -847,12 +847,12 @@
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Microsoft.SqlServer.Server.dll": {
-            "related": ".xml;.pdb"
+            "related": ".pdb;.xml"
           }
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.SqlServer.Server.dll": {
-            "related": ".xml;.pdb"
+            "related": ".pdb;.xml"
           }
         }
       },
@@ -4145,19 +4145,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\user\\.nuget\\packages\\": {}
+    "C:\\Users\\aynuran\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\Desktop\\Entity FW\\LibraryERP\\LibraryERP.Business\\LibraryERP.Business.csproj",
+      "projectUniqueName": "C:\\Users\\aynuran\\Desktop\\LibraryERP\\LibraryERP.Business\\LibraryERP.Business.csproj",
       "projectName": "LibraryERP.Business",
-      "projectPath": "C:\\Users\\user\\Desktop\\Entity FW\\LibraryERP\\LibraryERP.Business\\LibraryERP.Business.csproj",
-      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user\\Desktop\\Entity FW\\LibraryERP\\LibraryERP.Business\\obj\\",
+      "projectPath": "C:\\Users\\aynuran\\Desktop\\LibraryERP\\LibraryERP.Business\\LibraryERP.Business.csproj",
+      "packagesPath": "C:\\Users\\aynuran\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\aynuran\\Desktop\\LibraryERP\\LibraryERP.Business\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\aynuran\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4171,8 +4171,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\user\\Desktop\\Entity FW\\LibraryERP\\LibraryERP.Data\\LibraryERP.Data.csproj": {
-              "projectPath": "C:\\Users\\user\\Desktop\\Entity FW\\LibraryERP\\LibraryERP.Data\\LibraryERP.Data.csproj"
+            "C:\\Users\\aynuran\\Desktop\\LibraryERP\\LibraryERP.Data\\LibraryERP.Data.csproj": {
+              "projectPath": "C:\\Users\\aynuran\\Desktop\\LibraryERP\\LibraryERP.Data\\LibraryERP.Data.csproj"
             }
           }
         }
@@ -4219,7 +4219,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

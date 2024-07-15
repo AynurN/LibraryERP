@@ -62,17 +62,19 @@ namespace LibraryERP.Business.Implementations
                 Book book = await bookService.GetBookById(bookId);
 
                 if (book.Avilability)
-                { 
+                {
                     var loanItem = new LoanItem() { BookId = book.Id, LoanId = newLoan.Id };
                     loanItems.Add(loanItem);
                     book.Avilability = false;
                     book.BorrowCount++;
+                    
                    await  bookService.UpdateEntire(book);
                    await loanRepository.CommitAsync();
                 }
                 else
                 {
                     await Console.Out.WriteLineAsync("Book is not available!");
+
                 }
                 await Console.Out.WriteLineAsync("1. Add another book\n"+"2. Confirm");
                 int choice = Convert.ToInt32(Console.ReadLine());
@@ -80,6 +82,10 @@ namespace LibraryERP.Business.Implementations
                 {
                     break;
                 }
+            }
+            if (loanItems.Count == 0)
+            {
+                loanRepository.Delete(newLoan);
             }
             foreach (var loanItem in loanItems)
             {
@@ -111,28 +117,31 @@ namespace LibraryERP.Business.Implementations
             int borrowerId = Convert.ToInt32(Console.ReadLine());
             Borrower borrower = await borrowerService.GetBorrowerById(borrowerId);
 
-            if (borrower.Loans == null || borrower.Loans.Count == 0)
+            if (borrower.Loans == null || borrower.Loans.Count == 0 || borrower.Loans.All(x=>x.ReturnDate!=null))
             {
                 await Console.Out.WriteLineAsync("Borrower does not have any loans.");
                 return;
             }
-
-            foreach (var loan in borrower.Loans)
+            await Console.Out.WriteLineAsync("Choose id of active loan:");
+            List<Loan> loans = await GetByBorrowerId(borrowerId);
+            foreach (var item in loans)
             {
-                List<LoanItem> loanItems = await loanItemService.GetLoanItemsByLoanId(loan.Id);
-
+                await Console.Out.WriteLineAsync($"{item.Id}, LoanDate: {item.LoanDate}, MustReturnDate:{item.MustReturnDate}");
+            }
+            int loanId = Convert.ToInt32(Console.ReadLine());
+            Loan loan= await GetLoanById(loanId);
+             List<LoanItem> loanItems = await loanItemService.GetLoanItemsByLoanId(loanId);
                 foreach (var loanItem in loanItems)
                 {
                     Book book = await bookService.GetBookById(loanItem.BookId);
                     book.Avilability = true;
                     await bookService.UpdateEntire(book); 
-
-                    await loanItemService.Delete(loanItem.Id);
+                    await loanItemService.ChangeDeleteStatus(loanItem.Id);
                 }
 
                 loan.ReturnDate = DateTime.Now;
                 await UpdateEntire(loan); 
-            }
+            
 
             await loanRepository.CommitAsync(); 
 
@@ -147,5 +156,19 @@ namespace LibraryERP.Business.Implementations
             searched = loan;
             await loanRepository.CommitAsync();
         }
+        public async Task ChangeDeleteStatus(int id)
+        {
+            var loan= await loanRepository.Get(id);
+            if (loan == null)
+                throw new NullReferenceException("Book not found!");
+            loan.isDeleted = !(loan.isDeleted);
+            await loanRepository.CommitAsync();
+        }
+
+        public async Task<List<Loan>> GetByBorrowerId(int id)
+        {
+            return await loanRepository.GetAll().Include(x => x.Borrower).Include(x => x.LoanItems).ThenInclude(x=>x.Book).Where(x => x.ReturnDate==null).Where(x=>x.BorrowerId==id).AsNoTracking().ToListAsync();
+        }
+
     }
 }

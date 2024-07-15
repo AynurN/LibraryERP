@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\Desktop\\Entity FW\\LibraryERP\\LibraryERP.Data\\LibraryERP.Data.csproj": {}
+    "C:\\Users\\aynuran\\Desktop\\LibraryERP\\LibraryERP.Data\\LibraryERP.Data.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\Desktop\\Entity FW\\LibraryERP\\LibraryERP.Core\\LibraryERP.Core.csproj": {
+    "C:\\Users\\aynuran\\Desktop\\LibraryERP\\LibraryERP.Core\\LibraryERP.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Desktop\\Entity FW\\LibraryERP\\LibraryERP.Core\\LibraryERP.Core.csproj",
+        "projectUniqueName": "C:\\Users\\aynuran\\Desktop\\LibraryERP\\LibraryERP.Core\\LibraryERP.Core.csproj",
         "projectName": "LibraryERP.Core",
-        "projectPath": "C:\\Users\\user\\Desktop\\Entity FW\\LibraryERP\\LibraryERP.Core\\LibraryERP.Core.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Desktop\\Entity FW\\LibraryERP\\LibraryERP.Core\\obj\\",
+        "projectPath": "C:\\Users\\aynuran\\Desktop\\LibraryERP\\LibraryERP.Core\\LibraryERP.Core.csproj",
+        "packagesPath": "C:\\Users\\aynuran\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\aynuran\\Desktop\\LibraryERP\\LibraryERP.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\aynuran\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -76,21 +76,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\user\\Desktop\\Entity FW\\LibraryERP\\LibraryERP.Data\\LibraryERP.Data.csproj": {
+    "C:\\Users\\aynuran\\Desktop\\LibraryERP\\LibraryERP.Data\\LibraryERP.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Desktop\\Entity FW\\LibraryERP\\LibraryERP.Data\\LibraryERP.Data.csproj",
+        "projectUniqueName": "C:\\Users\\aynuran\\Desktop\\LibraryERP\\LibraryERP.Data\\LibraryERP.Data.csproj",
         "projectName": "LibraryERP.Data",
-        "projectPath": "C:\\Users\\user\\Desktop\\Entity FW\\LibraryERP\\LibraryERP.Data\\LibraryERP.Data.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Desktop\\Entity FW\\LibraryERP\\LibraryERP.Data\\obj\\",
+        "projectPath": "C:\\Users\\aynuran\\Desktop\\LibraryERP\\LibraryERP.Data\\LibraryERP.Data.csproj",
+        "packagesPath": "C:\\Users\\aynuran\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\aynuran\\Desktop\\LibraryERP\\LibraryERP.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\aynuran\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -104,8 +104,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\user\\Desktop\\Entity FW\\LibraryERP\\LibraryERP.Core\\LibraryERP.Core.csproj": {
-                "projectPath": "C:\\Users\\user\\Desktop\\Entity FW\\LibraryERP\\LibraryERP.Core\\LibraryERP.Core.csproj"
+              "C:\\Users\\aynuran\\Desktop\\LibraryERP\\LibraryERP.Core\\LibraryERP.Core.csproj": {
+                "projectPath": "C:\\Users\\aynuran\\Desktop\\LibraryERP\\LibraryERP.Core\\LibraryERP.Core.csproj"
               }
             }
           }
@@ -156,7 +156,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

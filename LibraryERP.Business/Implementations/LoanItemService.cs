@@ -51,10 +51,19 @@ namespace LibraryERP.Business.Implementations
 
         public async Task<List<LoanItem>> GetLoanItemsByLoanId(int id)
         {
-            List<LoanItem> b = await loanItemRepository.GetAllWhere(x => x.LoanId == id).ToListAsync();
+            List<LoanItem> b = await loanItemRepository.GetAllWhere(x => x.LoanId == id).Include(x=>x.Book).ToListAsync();
             if (b == null)
                 throw new NullReferenceException("LoanItem not found!");
             return b;
         }
+        public async Task ChangeDeleteStatus(int id)
+        {
+            var loanItem = await loanItemRepository.Get(id);
+            if (loanItem == null)
+                throw new NullReferenceException("Book not found!");
+            loanItem.isDeleted = !(loanItem.isDeleted);
+            await loanItemRepository.CommitAsync();
+        }
+
     }
 }

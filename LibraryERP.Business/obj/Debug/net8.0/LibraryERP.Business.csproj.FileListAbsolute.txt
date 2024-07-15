@@ -18,3 +18,23 @@ C:\Users\user\Desktop\Entity FW\LibraryERP\LibraryERP.Business\bin\Debug\net8.0\
 C:\Users\user\Desktop\Entity FW\LibraryERP\LibraryERP.Business\bin\Debug\net8.0\LibraryERP.Data.pdb
 C:\Users\user\Desktop\Entity FW\LibraryERP\LibraryERP.Business\bin\Debug\net8.0\LibraryERP.Core.pdb
 C:\Users\user\Desktop\Entity FW\LibraryERP\LibraryERP.Business\obj\Debug\net8.0\LibraryE.76CE5423.Up2Date
+C:\Users\aynuran\Desktop\LibraryERP\LibraryERP.Business\bin\Debug\net8.0\LibraryERP.Business.deps.json
+C:\Users\aynuran\Desktop\LibraryERP\LibraryERP.Business\bin\Debug\net8.0\LibraryERP.Business.runtimeconfig.json
+C:\Users\aynuran\Desktop\LibraryERP\LibraryERP.Business\bin\Debug\net8.0\LibraryERP.Business.dll
+C:\Users\aynuran\Desktop\LibraryERP\LibraryERP.Business\bin\Debug\net8.0\LibraryERP.Business.pdb
+C:\Users\aynuran\Desktop\LibraryERP\LibraryERP.Business\bin\Debug\net8.0\LibraryERP.Core.dll
+C:\Users\aynuran\Desktop\LibraryERP\LibraryERP.Business\bin\Debug\net8.0\LibraryERP.Data.dll
+C:\Users\aynuran\Desktop\LibraryERP\LibraryERP.Business\bin\Debug\net8.0\LibraryERP.Data.pdb
+C:\Users\aynuran\Desktop\LibraryERP\LibraryERP.Business\bin\Debug\net8.0\LibraryERP.Core.pdb
+C:\Users\aynuran\Desktop\LibraryERP\LibraryERP.Business\obj\Debug\net8.0\LibraryERP.Business.csproj.AssemblyReference.cache
+C:\Users\aynuran\Desktop\LibraryERP\LibraryERP.Business\obj\Debug\net8.0\LibraryERP.Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aynuran\Desktop\LibraryERP\LibraryERP.Business\obj\Debug\net8.0\LibraryERP.Business.AssemblyInfoInputs.cache
+C:\Users\aynuran\Desktop\LibraryERP\LibraryERP.Business\obj\Debug\net8.0\LibraryERP.Business.AssemblyInfo.cs
+C:\Users\aynuran\Desktop\LibraryERP\LibraryERP.Business\obj\Debug\net8.0\LibraryERP.Business.csproj.CoreCompileInputs.cache
+C:\Users\aynuran\Desktop\LibraryERP\LibraryERP.Business\obj\Debug\net8.0\LibraryERP.Business.sourcelink.json
+C:\Users\aynuran\Desktop\LibraryERP\LibraryERP.Business\obj\Debug\net8.0\LibraryE.76CE5423.Up2Date
+C:\Users\aynuran\Desktop\LibraryERP\LibraryERP.Business\obj\Debug\net8.0\LibraryERP.Business.dll
+C:\Users\aynuran\Desktop\LibraryERP\LibraryERP.Business\obj\Debug\net8.0\refint\LibraryERP.Business.dll
+C:\Users\aynuran\Desktop\LibraryERP\LibraryERP.Business\obj\Debug\net8.0\LibraryERP.Business.pdb
+C:\Users\aynuran\Desktop\LibraryERP\LibraryERP.Business\obj\Debug\net8.0\LibraryERP.Business.genruntimeconfig.cache
+C:\Users\aynuran\Desktop\LibraryERP\LibraryERP.Business\obj\Debug\net8.0\ref\LibraryERP.Business.dll

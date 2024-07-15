@@ -9,6 +9,7 @@ namespace LibraryERP.Business.Interfaces
 {
     public interface IloanItemService
     {
+        Task ChangeDeleteStatus(int id);
         Task Delete(int id);
         Task<List<LoanItem>> GetLoanItemsByLoanId(int id);
         Task<List<LoanItem>> GetAll();
